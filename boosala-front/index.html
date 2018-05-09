@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- /*~~~~~ BOOSALA. Website ~~~~~*/ -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="description" content="Bring home the lost"/>
+    <meta name="keywords" content="lost, missed, person"> 
+    <title>Boosala | Bring home the lost</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+    <!-- AMAzon -->
+    <script src="js/aws-cognito-sdk.min.js"></script>
+    <script src="js/amazon-cognito-identity.min.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.229.1.min.js"></script>
+
+</head>
+<body>
+    <section id="home">
+
+        <div id="languages" class="col-lg-10 col-xs-12 col-lg-offset-1 align-right">
+            <ul>
+                <li id="arabic">
+                        <button type="submit">ar</button>
+                </li>
+                <li id="english">
+                        <button type="submit"><span class="focus">en</span></button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div id="logo-div" class="col-lg-6 col-md-6 col-xs-12 align-left">
+                    <img id="logo-back" class="logo" src="images/logo_back.png" />
+                    <img id="logo-front" class="logo" src="images/logo_front.png" />
+            </div>
+            <div id="main" class="col-lg-6 col-md-6 col-xs-12 align-right vertical-center">
+            <h2>بوصلة</h2>
+            <h5>Boosala</h5>
+            <h4>Bring home the lost</h4>
+            <button id="start">Start</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="search">
+        <a id="back"><img src="images/arrow-left.png" alt="go-back" /></a>        
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2 col-md-6 col-xs-12 align-center">
+                    <a id="back_logo"><img id="logo"src="images/logo.png" /></a>
+                <h5>My name is <input id="me" type="text" name="me" placeholder="Your name" required> and
+                <br/>
+                I'm looking for <input id="their" type="text" name="him" placeholder="Their name" required>.</h5>
+                <div id="secondary" class="col-lg-6 col-md-6 col-xs-12 align-right">
+                     <label for="fileToUpload">
+                            <img id="picture" src="images/face.jpeg" alt="Their" title="Click to upload a photo of your person"/>
+                    </label>
+                    <input id="fileToUpload" type='file' name="fileToUpload" onchange="readURL(this);" />
+                </div>
+                <div id="send" class="col-lg-6 col-md-6 col-xs-12 align-left">
+                    <button id="submit" name="submit">Find</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="result">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2 col-md-6 col-xs-12 align-center">
+                <a id="back_to_search"><img id="logo" src="images/logo.png" /></a>
+                <h5>FOUND</h5>
+                <img style="width:150px;height:200px" src="" id="missing_person_f"></img>
+                <h4><span id="their-name"></span> may have been located at Domiz Refugee Camp on Monday, 29 March 2018</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3195.4959106152555!2d42.87847931531282!3d36.782658679952256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x400861f6190be329%3A0x2e56481624e6e611!2sDomiz+Camp!5e0!3m2!1sen!2sae!4v1524999638558" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="not-found">     
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2 col-md-6 col-xs-12 align-center">
+                <a href="index.html"><img id="logo" src="images/logo.png" /></a>
+                <h5>Not Found. Yet.</h5>
+                <div id="not-found-message" class="align-left">
+
+                    <img style="width:150px;height:200px" src="" id="missing_person_nf"></img>
+                    <p>Unfortunately, we have not been able to locate <span id="their-name-not-found"></span> in our current database of footage. If you enter your contact information below, we will store the provided name and photo and contact you if we find a match in the future.</p>
+                    <!-- <br> -->
+                    <p>You may wish to contact the <a id="project_link" href="https://www.icmp.int/?resources=online-inquiry-center-how-to-report-a-missing-person-to-icmp">Restoring Family Links project</a> (run by the Red Cross, Red Crescent, and ICRC), <a id="project_link" href="https://www.icmp.int/?resources=online-inquiry-center-how-to-report-a-missing-person-to-icmp">enter an inquiry</a> with the International Commission on Missing Persons, and make a posting on numerous social media pages hoping to reconnect families.</p>
+                    <br>
+                    <div class="col-lg-5 col-md-5 col-xs-12">
+                        <input type="text" name="name" id="name" value="" placeholder="Enter your name">
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-xs-12">
+                        <input type="email" name="email" id="email" value="" placeholder="Enter your email">
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-xs-12">
+                        <input type="button" name="" value="Submit">
+                </div>                
+
+                </div>           
+            </div>
+        </div>
+    </section>
+
+
+    <!--~~~~~ JS Assets ~~~~~-->
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/searchFacesByImage.js"></script>
+
+</body>
+</html>
