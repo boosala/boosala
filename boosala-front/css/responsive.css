@@ -1,0 +1,94 @@
+/*~~~~~ Responsive Boosala Style ~~~~~*/
+/************************/
+/*@media(min-width:1400px) and (max-width:1920px) {
+
+}*/
+/************************/
+/*@media(min-width:1200px) and (max-width:1400px) {
+
+}
+*/
+/************************/
+@media(max-width:1200px) {
+}
+/************************/
+@media(min-width:700px) and (max-width:1023px) {
+    #main {text-align: center !important}
+    .vertical-center {top: 40px}
+    #home #logo{width: 45%;}
+    #home h5{font-size: 100px;}
+    #home h4{font-size: 30px;}
+    #home #start{font-size: 30px;padding: 5px 100px; margin-top: 50px}
+    #home #logo-div{text-align: center}
+
+    #search #logo{width: 25%;padding-top: 40px}
+    #search h5{font-size: 25px;padding-top: 20px}
+    #search input{font-size: 10px;width: 100px;}
+    #search #picture{width: 70%;}
+    #search #submit{margin-top: 70px; }
+    #search #secondary{text-align: center}
+    #search #send{text-align: center !important}
+}
+/************************/
+
+/************************/
+
+/************************/
+@media (max-width:800px) {
+    
+
+}
+@media(min-width:768px) and (max-width:1050px) {
+
+}
+/************************/
+@media(max-width:740px) {
+    
+}
+/************************/
+@media(min-width:630px) and (max-width:750px) {
+    #main {text-align: center !important}
+    .vertical-center {top: 20px}
+    #home #logo{width: 15%;margin-top:3em;}
+    #home h5{font-size: 55px;}
+    #home h4{font-size: 20px;}
+    #home #start{font-size: 15px;padding: 5px 100px; margin-top: 20px}
+    #home #logo-div{text-align: center}
+
+    #search #logo{width: 10%;padding-top: 30px}
+    #search h5{font-size: 10px;padding-top: 20px}
+    #search input{font-size: 10px;width: 100px;}
+    #search #picture{width: 45%;padding-top:10px;}
+    #search #submit{margin-top: 20px; }
+    #search #secondary{text-align: center}
+    #search #send{text-align: center !important};
+}
+/************************/
+@media(max-width:540px) {
+    #home {background: url('../images/mobile-bg.png') no-repeat #f5f5f5 ;background-size: cover;}
+    #main {text-align: center !important}
+    .vertical-center {top: 40px}
+    #home #logo{width: 50%;}
+    #home h5{font-size: 70px;}
+    #home h4{font-size: 20px;}
+    #home #start{font-size: 15px;padding: 5px 100px; margin-top: 40px}
+    #home #logo-div{text-align: center}
+
+    #search #logo{width: 25%;padding-top: 40px}
+    #search h5{font-size: 25px;padding-top: 20px}
+    #search input{font-size: 15px;width: 100px;}
+    #search #picture{width: 70%;padding-top:50px;}
+    #search #submit{margin-top: 70px; }
+    #search #secondary{text-align: center}
+    #search #send{text-align: center !important}
+
+}
+/************************/
+@media(max-width:400px) {
+
+}   
+/************************/
+@media(max-width:320px) {
+
+}
+
