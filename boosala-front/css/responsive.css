@@ -65,7 +65,7 @@
 }
 /************************/
 @media(max-width:540px) {
-    #home {background: url('../images/mobile-bg.png') no-repeat #f5f5f5 ;background-size: cover;}
+    #home {background: url('../images/mobile-bg.jpg') no-repeat #f5f5f5 ;background-size: cover;}
     #main {text-align: center !important}
     .vertical-center {top: 40px}
     #home #logo{width: 50%;}
