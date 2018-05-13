@@ -2,12 +2,16 @@
   font-family: 'Cairo';
 }
 
-.App #languages{padding: 12rem;padding-top: 1rem;padding-bottom: 1rem;padding-right: 0em;z-index: 9999; position: absolute;}
+.App #languages{
+  z-index: 9999;
+  position: absolute;
+  right: 18%;
+}
 .App #languages li{display: inline-block;padding: 0px 0px 0px 20px;font-size: 17px;}
 .App #languages button{border-width: 0;background: none;outline: none;}
 .App .focus{font-weight: 900;zoom:1.2}
-.App #languages a{color: #f5f5f5;opacity: .6;letter-spacing: 0px;transition: .5s}
-.App #languages a:hover{opacity: 1;transition: .5s}
+.App #languages li{color: #f5f5f5;opacity: .6;letter-spacing: 0px;transition: .5s}
+.App #languages li:hover{opacity: 1;transition: .5s}
 
 .Homepage{
   position: absolute;
@@ -45,7 +49,9 @@
 }
 /* End of Logo Styling */
 
-.Homepage .text{color: white; text-align: right; margin: 20% 18% auto 30%}
-.Homepage #heading{font-size: 3.5rem; top: 20%; position: absolute; margin: 9%;}
+.Homepage .text{color: white; text-align: right; margin: 16% 18% auto 30%}
+.Homepage #heading{font-size: 3.5rem; top: 20%; position: absolute; margin: 5% 0% 0% 7%;}
 .Homepage #title{font-size: 6rem; margin-bottom: -10%;}
 .Homepage #caption{font-size: 1.5rem; color: #f5f5f5;}
+.Homepage #start-button{font-size: 1.5rem;color: #f5f5f5; background-color: #d62839; padding: 1% 35%; border-radius: 15px; border: 0px; margin-top: 5%; opacity: 0.8}
+.Homepage #start-button:hover{opacity: 1}

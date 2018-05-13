@@ -54,7 +54,7 @@ class App extends Component {
             <div id="heading">{this.state.heading[this.state.language]}</div>
             <div id="title">{this.state.title[this.state.language]}</div>
             <div id="caption">{this.state.caption[this.state.language]}</div>
-            <button id="startButton">{this.state.startButton[this.state.language]}</button>
+            <button id="start-button">{this.state.startButton[this.state.language]}</button>
           </div>
         </div>
       </div>
