@@ -1,0 +1,45 @@
+
+.Searchpage{
+  position: absolute;
+  /*background: url('../images/bg.jpg') no-repeat #f5f5f5 ;*/
+  background-size: cover; 
+  width: 100%;
+  height: 100%; 
+  padding: 0px !important;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.55);
+  box-sizing: border-box;
+  display: flex;
+  text-align: center;
+}
+
+.Searchpage .column{
+  flex: 50%;
+  margin-left: 25%
+}
+
+/* Start of Logo Styling */
+.Searchpage #logo-div img{
+  /*position: absolute;*/
+  width: 10%;
+  margin-top: 5em;
+  /*left: 5%;*/
+  /*top: 10%;*/
+}
+.Searchpage #logo-div #logo-front{ z-index: 2; -webkit-animation: rotation 5s linear, 5s rotation 5s linear;}
+.Searchpage #logo-back{ z-index: 1;}
+
+@-webkit-keyframes rotation {
+  0% { -webkit-transform: rotate(0deg);}
+  25% {-webkit-transform: rotate(20deg);}
+  50% {-webkit-transform: rotate(10deg);}
+  75% {-webkit-transform: rotate(15deg);}
+  100% {-webkit-transform: rotate(0deg);}
+}
+/* End of Logo Styling */
+
+.Searchpage .text{color: white; text-align: right; margin: 16% 18% auto 30%}
+.Searchpage #heading{font-size: 3.5rem; top: 20%; position: absolute; margin: 5% 0% 0% 7%;}
+.Searchpage #title{font-size: 6rem; margin-bottom: -10%;}
+.Searchpage #caption{font-size: 1.5rem; color: #f5f5f5;}
+.Searchpage #start-button{font-size: 1.5rem;color: #f5f5f5; background-color: #d62839; padding: 1% 35%; border-radius: 15px; border: 0px; margin-top: 5%; opacity: 0.8}
+.Searchpage #start-button:hover{opacity: 1}
