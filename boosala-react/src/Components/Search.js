@@ -9,51 +9,37 @@ class Search extends Component {
     //Break up each text into english and arabic
     this.state = {
       language: 'english',
-      heading:{
-        english: 'بوصلة',
-        arabic: ''
+      text:{
+        english: ['My name is', 'Your name', 'and', 'I\'m looking for', 'Their name'],
+        arabic: ['اسمي', 'الاسم', '', 'وأبحث عن', 'اسم المفقود']
       },
-      title: {
-        english: 'Boosala',
-        arabic: 'بوصلة'
-      },
-      caption: {
-        english: 'Bring home the lost',
-        arabic: '',
-      },
-      startButton: {
-        english: 'Start',
-        arabic: 'ابدأ'
+      findButton: {
+        english: 'Find',
+        arabic: 'ابحث'
       }
     }
   }
 
-  renderLanguageBar() {
-    return(
-      <div id="languages">
-          <ul>
-            <li id="arabic">عربي</li>
-            <li id="english">English</li>
-          </ul>
-      </div>
-    );
-  };
 
 
   render() {
     return (
-      <div className="App">
-        {this.renderLanguageBar()}
         <div className="Searchpage">
           <div id="logo-div" className="column">
-            <img id="logo-back" className="logo" src={logo} alt="boosala logo"/>
-            <div id="heading">{this.state.heading[this.state.language]}</div>
-            <div id="title">{this.state.title[this.state.language]}</div>
-            <div id="caption">{this.state.caption[this.state.language]}</div>
-            <button id="start-button">{this.state.startButton[this.state.language]}</button>
+            <img id="logo" src={logo} alt="boosala logo"/>
+            <div id="panel">
+            <div className="text">
+              {this.state.text[this.state.language][0]} 
+              <input id="me" name="me" placeholder={this.state.text[this.state.language][1]}  required/>
+              {this.state.text[this.state.language][2]}
+            </div>
+            <div className="text">
+              {this.state.text[this.state.language][3]}
+              <input id="their" name="him" placeholder={this.state.text[this.state.language][4]} required />.
+            </div>
+            </div>
           </div>
         </div>
-      </div>
     );
   }
 }
