@@ -7,14 +7,3 @@ body {
 *{
   font-family: 'Cairo';
 }
-
-#languages{
-  z-index: 9999;
-  position: absolute;
-  right: 18%;
-}
-#languages li{display: inline-block;padding: 0px 0px 0px 20px;font-size: 17px;}
-#languages button{border-width: 0;background: none;outline: none;}
-.focus{font-weight: 900;zoom:1.2}
-#languages li{color: #f5f5f5;opacity: .6;letter-spacing: 0px;transition: .5s}
-#languages li:hover{opacity: 1;transition: .5s}
