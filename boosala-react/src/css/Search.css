@@ -18,7 +18,7 @@
 }
 
 .Searchpage #panel{padding-top: 45px}
-.Searchpage .text{font-size: 30px;}
+.Searchpage .text{font-size: 30px;line-height: 50px}
 .Searchpage input{
   font-size: 20px;
   width: 200px;
@@ -27,3 +27,61 @@
   border-bottom: 1px solid;
   background-color: #f5f5f5
 }
+
+.Searchpage #face{
+  width: 11%;
+  transform: rotate(-15deg);
+  opacity: 0.9;
+  cursor: pointer;
+  padding-top: 20px;
+  border:10px solid white;
+  box-shadow:2px 2px 10px #B8B8B8;
+  transition: 0.2s
+}
+
+.Searchpage #face:hover{
+  opacity: 1;
+}
+
+.Searchpage #upload{
+  padding-top: 40px;
+  position: relative;
+  right: 50px
+}
+
+.Searchpage #submit{
+  font-size: 16px;
+  color: #f5f5f5; 
+  background-color: #aba000;
+  padding: 5px 20px; 
+  border-radius: 15px; 
+  border: 0px;
+  margin-top: 120px; 
+  opacity: 0.8;
+  margin-left: 10px;
+  position:relative;
+  left: 35px;
+  top:-100px;
+  transition: 0.2s
+}
+
+.Searchpage #submit:hover{
+  opacity: 1
+}
+
+.Searchpage #fileToUpload{
+  display: none;
+}
+
+.Searchpage #back {
+  position: relative;
+  top: 30px;
+  left: 30px;
+  opacity: 0.5;
+  color: black;
+  cursor: pointer;
+  transition: 0.2s
+}
+
+.Searchpage #back:hover {opacity: 1;}
+
