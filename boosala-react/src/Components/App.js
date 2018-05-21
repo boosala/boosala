@@ -29,13 +29,14 @@ class App extends Component {
         english: 'Start',
         arabic: 'ابدأ'
       },
-      current: "home" //keep track of which app stage
+      current: "home", //keep track of which app stage
+      backgroundColor: "black"
     }
   }
 
   renderLanguageBar() {
     return(
-      <div id="languages">
+      <div id="languages" className={this.state.backgroundColor==="white" ? "white-background" : "black-background"}>
           <ul>
             <li id="arabic">عربي</li>
             <li id="english">English</li>
@@ -46,7 +47,7 @@ class App extends Component {
   };
 
   loadSearch(){
-    this.setState({current: "search"});
+    this.setState({current: "search", backgroundColor: "white"});
   }
 
   loadHome(){

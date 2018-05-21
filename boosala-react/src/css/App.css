@@ -15,13 +15,14 @@
   flex: 50%;
 }
 
-.Homepage #languages{z-index: 9999; position: absolute; right: 18%;}
-.Homepage #languages li{display: inline-block;padding: 0px 0px 0px 20px;font-size: 17px;}
-.Homepage #languages button{border-width: 0;background: none;outline: none;}
+.App #languages{z-index: 9999; position: absolute; right: 18%;}
+.App #languages li{display: inline-block;padding: 0px 0px 0px 20px;font-size: 17px;}
+.App #languages button{border-width: 0;background: none;outline: none;}
 .Homepage .focus{font-weight: 900;zoom:1.2}
-.Homepage #languages li{color: #f5f5f5;opacity: .6;letter-spacing: 0px;transition: .5s}
-.Homepage #languages li:hover{opacity: 1;transition: .5s}
-
+.App #languages li{opacity: .6;letter-spacing: 0px;transition: .5s}
+.App #languages li:hover{opacity: 1;transition: .5s}
+.App .black-background  li{color: #f5f5f5;}
+.App .white-background  li{color: #131313;}
 
 /* Start of Logo Styling */
 .Homepage #logo-div img{
