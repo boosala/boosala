@@ -4,12 +4,15 @@ import logo from './../images/logo.png';
 import faceEn from './../images/faceEn.jpeg';
 import faceAr from './../images/faceAr.jpg';
 import arrowLeft from './../images/arrowLeft.png';
-import $ from 'jquery'
+//import $ from 'jquery'
+import App from './App';
+
 
 class Search extends Component {
 
   constructor(props){
     super(props);
+    this.backToHome = this.backToHome.bind(this);
     this.state = {
       language: 'english',
       text:{
@@ -24,17 +27,19 @@ class Search extends Component {
         english: faceEn,
         arabic: faceAr
       },
+      current: "search",
+      backgroundColor: "white"
     }
   }
 
+  backToHome(){
+    this.setState({current: "home"});
+  }
 
-
-
-
-  render() {
+  loadSearch(){
     return (
         <div className="Searchpage">
-          <a id="back"><img src={arrowLeft} alt="go-back" /></a>        
+          <a id="back" onClick={this.backToHome}><img src={arrowLeft} alt="go-back" /></a>        
           <div id="logo-div" className="column">
             <img id="logo" src={logo} alt="boosala logo"/>
             <div id="panel">
@@ -57,6 +62,15 @@ class Search extends Component {
             </div>
           </div>
         </div>
+    );
+  }
+
+  render() {
+    return (
+      <div className="Search">
+        {this.state.current === "search" ? this.loadSearch() : null}
+        {this.state.current === "home" ? <App/> : null}
+      </div>
     );
   }
 }
