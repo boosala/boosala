@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './../css/App.css';
 import logo_front from  './../images/logo_front.png';
 import logo_back from './../images/logo_back.png';
+import Search from './Search.js';
 
 class App extends Component {
 
@@ -41,6 +42,10 @@ class App extends Component {
 
   };
 
+  loadSearch(){
+
+  }
+
   render() {
     return (
       <div className="App">
@@ -54,7 +59,7 @@ class App extends Component {
             <div id="heading">{this.state.heading[this.state.language]}</div>
             <div id="title">{this.state.title[this.state.language]}</div>
             <div id="caption">{this.state.caption[this.state.language]}</div>
-            <button id="start-button">{this.state.startButton[this.state.language]}</button>
+            <button id="start-button">{this.state.startButton[this.state.language]} onClick={this.loadSearch}</button>
           </div>
         </div>
       </div>
