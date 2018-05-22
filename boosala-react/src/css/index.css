@@ -7,3 +7,5 @@ body {
 *{
   font-family: 'Cairo';
 }
+
+.ArTextDirection {direction: rtl}
