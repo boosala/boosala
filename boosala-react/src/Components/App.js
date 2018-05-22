@@ -10,6 +10,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.loadSearch = this.loadSearch.bind(this);
+    this.changeLanguage = this.changeLanguage.bind(this);
     //Break up each text into english and arabic
     this.state = {
       language: 'english',
@@ -38,8 +39,8 @@ class App extends Component {
     return(
       <div id="languages" className={this.state.backgroundColor==="white" ? "white-background" : "black-background"}>
           <ul>
-            <li id="arabic">عربي</li>
-            <li id="english">English</li>
+            <li id="arabic" onClick={() => {this.setState({language: "arabic"});}}>عربي</li>
+            <li id="english" onClick={() => {this.setState({language: "english"});}}>English</li>
           </ul>
       </div>
     );
