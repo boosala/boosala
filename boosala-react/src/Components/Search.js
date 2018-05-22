@@ -39,8 +39,9 @@ class Search extends Component {
   loadSearch(){
     return (
         <div className="Searchpage">
-          <a id="back" onClick={this.backToHome}><img src={arrowLeft} alt="go-back" /></a>        
           <div id="logo-div" className="column">
+          <a id="back" onClick={this.backToHome}><img src={arrowLeft} alt="go-back" /></a>        
+          
             <img id="logo" src={logo} alt="boosala logo"/>
             <div id="panel" className={this.state.language==="arabic" ? "ArTextDirection" : " "}>
                 <div className="text">

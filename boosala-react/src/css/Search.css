@@ -40,7 +40,7 @@
 }
 
 .Searchpage #face:hover{
-  opacity: 1;
+  opacity: 1
 }
 
 .Searchpage #upload{
@@ -56,7 +56,6 @@
   padding: 5px 20px; 
   border-radius: 15px; 
   border: 0px;
-  margin-top: 120px; 
   opacity: 0.8;
   margin-left: 10px;
   position:relative;
@@ -74,7 +73,7 @@
 }
 
 .Searchpage #back {
-  position: relative;
+  position: absolute;
   top: 30px;
   left: 30px;
   opacity: 0.5;
@@ -85,3 +84,32 @@
 
 .Searchpage #back:hover {opacity: 1;}
 
+/* Responsive Style */
+@media(min-width:768px) and (max-width:1023px) {
+    .Searchpage #logo{width: 30%;margin-top: 5em;}
+    .Searchpage #panel{padding-top: 50px}
+    .Searchpage .text{font-size: 3rem;line-height:70px;}
+    .Searchpage input{font-size: 2rem}
+    .Searchpage #upload{padding-top: 50px}
+    .Searchpage #face{width: 25%}
+    .Searchpage #submit{top: -100px;padding:1px 30px;font-size: 2rem}   
+}
+@media (min-width: 601px) and (max-width:767px) {
+    .Searchpage #logo{width: 12%;margin-top: 1em;}
+    .Searchpage #panel{padding-top: 5px}
+    .Searchpage .text{font-size: 1rem}
+    .Searchpage input{font-size: 1rem}
+    .Searchpage .text{line-height: 40px}
+    .Searchpage #upload{padding-top: 25px}
+    .Searchpage #face{width: 12%}
+    .Searchpage #submit{top: -70px;padding:2px 20px;}
+}
+
+@media (max-width: 600px) {
+    .Searchpage #logo{width: 30%;margin-top: 4em;}
+    .Searchpage .text{font-size: 1rem}
+    .Searchpage #face{width: 40%;left: 10%;position: relative;}
+    .Searchpage #panel{padding-top: 25px}
+    .Searchpage #upload{right: 0px}
+    .Searchpage #submit {margin-left: 10px;left: -88px;top: 60px;}
+}
