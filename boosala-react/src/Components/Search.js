@@ -14,7 +14,7 @@ class Search extends Component {
     super(props);
     this.backToHome = this.backToHome.bind(this);
     this.state = {
-      language: 'english',
+      language: this.props.language,
       text:{
         english: ['My name is', 'Your name', 'and', 'I\'m looking for', 'Their name'],
         arabic: ['اسمي', 'الاسم', '', 'وأبحث عن', 'اسم المفقود']
@@ -42,7 +42,7 @@ class Search extends Component {
           <a id="back" onClick={this.backToHome}><img src={arrowLeft} alt="go-back" /></a>        
           <div id="logo-div" className="column">
             <img id="logo" src={logo} alt="boosala logo"/>
-            <div id="panel">
+            <div id="panel" className={this.state.language==="arabic" ? "ArTextDirection" : " "}>
                 <div className="text">
                   {this.state.text[this.state.language][0]} 
                   <input id="me" name="me" placeholder={this.state.text[this.state.language][1]}  required/>

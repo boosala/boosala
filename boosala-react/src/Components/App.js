@@ -10,8 +10,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.loadSearch = this.loadSearch.bind(this);
-    this.changeLanguage = this.changeLanguage.bind(this);
-    //Break up each text into english and arabic
+    // this.changeLanguage = this.changeLanguage.bind(this);
     this.state = {
       language: 'english',
       heading:{
@@ -30,7 +29,7 @@ class App extends Component {
         english: 'Start',
         arabic: 'ابدأ'
       },
-      current: "home", //keep track of which app stage
+      current: "home",
       backgroundColor: "black"
     }
   }
@@ -54,6 +53,7 @@ class App extends Component {
   loadHome(){
     return (
       <div className="Homepage">
+          {this.renderLanguageBar()}
           <div id="logo-div" className="column">
               <img id="logo-back" className="logo" src={logo_back} alt="boosala logo"/>
               <img id="logo-front" className="logo" src={logo_front} alt="boosala logo"/>
@@ -71,9 +71,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {this.renderLanguageBar()}
         {this.state.current === "home" ? this.loadHome() : null}
-        {this.state.current === "search" ? <Search/> : null}
+        {this.state.current === "search" ? <Search language={this.state.language}/> : null}
       </div>
     );
   }
