@@ -54,11 +54,11 @@ class Search extends Component {
   }
 
   updateTheirValue(evt){
-    this.state={their: evt.target.value};   
+    this.setState({their: evt.target.value});   
   }
 
   updateUserNameValue(evt){
-    this.state={userName: evt.target.value};   
+    this.setState({userName: evt.target.value});   
   }
 
   loadSearch(){
@@ -81,7 +81,7 @@ class Search extends Component {
                 </div>
             </div>
             <div id="upload">
-                <label for="fileToUpload">
+                <label htmlFor="fileToUpload">
                     <img id="face" src={this.state.face[this.state.language]} alt="boosala logo"/>
                 </label>
                 <input id="fileToUpload" type="file" name="fileToUpload" />
