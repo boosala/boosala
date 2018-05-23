@@ -97,11 +97,12 @@ class Search extends Component {
       <div className="Search">
         {this.state.current === "search" ? this.loadSearch() : null}
         {this.state.current === "home" ? <App language={this.state.language}/> : null}
-        {this.state.current === "result" ? <Result language={this.state.language}
-                                            their={this.state.their}
-                                            userName={this.state.userName}
-                                            location={this.state.location}
-                                            datetime={this.state.datetime} /> : null}
+        {this.state.current === "result" ? 
+          <Result language={this.state.language}
+          their={this.state.their}
+          userName={this.state.userName}
+          location={this.state.location}
+          datetime={this.state.datetime} /> : null}
       </div>
     );
   }
