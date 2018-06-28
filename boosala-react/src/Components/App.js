@@ -10,9 +10,8 @@ class App extends Component {
   constructor(props){
     super(props);
     this.loadSearch = this.loadSearch.bind(this);
-    // this.changeLanguage = this.changeLanguage.bind(this);
     this.state = {
-      language: 'english',
+      language: this.props.language || 'english',
       heading:{
         english: 'بوصلة',
         arabic: ''
@@ -24,7 +23,7 @@ class App extends Component {
       caption: {
         english: 'Bring home the lost',
         arabic: '',
-      },
+      },  
       startButton: {
         english: 'Start',
         arabic: 'ابدأ'
