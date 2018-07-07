@@ -1,0 +1,91 @@
+
+.Homepage{
+  position: absolute;
+  background: url('../images/bg.jpg') no-repeat #f5f5f5 ;
+  background-size: cover; 
+  width: 100%;
+  height: 100%; 
+  padding: 0px !important;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.55);
+  box-sizing: border-box;
+  display: flex;
+}
+
+.Homepage .column{
+  flex: 50%;
+}
+
+.App #languages{z-index: 9999; position: absolute; right: 18%;}
+.App #languages li{display: inline-block;padding: 0px 0px 0px 20px;font-size: 17px;}
+.App #languages button{border-width: 0;background: none;outline: none;}
+.Homepage .focus{font-weight: 900;zoom:1.2}
+.App #languages li{opacity: .6;letter-spacing: 0px;transition: .5s}
+.App #languages li:hover{opacity: 1;transition: .5s}
+.App .black-background  li{color: #f5f5f5;}
+.App .white-background  li{color: #131313;}
+
+/* Start of Logo Styling */
+.Homepage #logo-div img{
+  position: absolute;
+  width: 40%;
+  margin-top: 0em;
+  left: 5%;
+  top: 10%;
+}
+.Homepage #logo-div #logo-front{ z-index: 2; -webkit-animation: rotation 5s linear, 5s rotation 5s linear;}
+.Homepage #logo-back{ z-index: 1;}
+
+@-webkit-keyframes rotation {
+  0% { -webkit-transform: rotate(0deg);}
+  25% {-webkit-transform: rotate(20deg);}
+  50% {-webkit-transform: rotate(10deg);}
+  75% {-webkit-transform: rotate(15deg);}
+  100% {-webkit-transform: rotate(0deg);}
+}
+/* End of Logo Styling */
+
+.Homepage .text{color: white; text-align: right; margin: 16% 18% auto 30%}
+.Homepage #heading{font-size: 3.5rem; top: 20%; position: absolute; margin: 5% 0% 0% 7%;}
+.Homepage #title{font-size: 6rem; margin-bottom: -10%;}
+.Homepage #caption{font-size: 1.5rem; color: #f5f5f5;}
+.Homepage #start-button{font-size: 1.5rem;color: #f5f5f5; background-color: #d62839; padding: 1% 35%; border-radius: 15px; border: 0px; margin-top: 5%; opacity: 0.8}
+.Homepage #start-button:hover{opacity: 1}
+
+/* Responsive Style */
+@media(min-width:1024px) and (max-width:1200px) {
+  .App #languages li{font-size: 22px}
+  .Homepage #logo-div img{padding-top: 6em}
+  .App #languages{right: 5%}
+  .Homepage .text {margin: 25% 5% auto 30%;}
+  .Homepage #title{font-size: 6rem}
+  .Homepage #heading {margin: 0% 0% 0% 8%;top:31%;}
+  .Homepage #start-button{padding: 0% 40%}
+}
+@media(min-width:768px) and (max-width:1023px) {
+  .App #languages li{font-size: 22px}
+  .Homepage #logo-div img{width: 45%;left: 28%}
+  .Homepage .text{margin:auto;text-align: center;}
+  .Homepage .column{flex: none;padding-top: 27em;}
+  .App #languages{right: 5%}
+  .Homepage #heading {top: 52%;margin: 0% 0% 0% 12%;font-size: 4.5rem}
+  .Homepage #title{font-size: 8rem}
+  .Homepage #caption{font-size: 2.5rem}
+  .Homepage #start-button{font-size: 2rem;padding: 0% 40%}
+}
+@media (min-width: 601px) and (max-width:767px) {
+  .App #languages{right: 5%}
+  .Homepage .text {margin: 10% 5% auto 30%;}
+  .Homepage #title{font-size: 5rem;margin-bottom: -25%}
+  .Homepage #heading {margin: 0% 0% 0% 7%;font-size: 3rem;top:14.5%;}
+  .Homepage #caption{padding-top: 1em}
+  .Homepage #start-button{padding: 0.2% 42%;font-size: 1rem;margin-top: 6%}
+}
+
+@media (max-width: 600px) {
+  .Homepage{background: url('../images/mobile-bg.jpg') no-repeat #f5f5f5;background-size: cover; }
+  .Homepage #logo-div img{width: 55%;left: 22%}
+  .Homepage .text{margin:auto;text-align: center;}
+  .Homepage .column{flex: none;padding-top: 12em;}
+  .App #languages{right: 5%}
+  .Homepage #heading {top: 43%;margin: 0% 0% 0% 15%;}
+}
